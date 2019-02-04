@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style> 
+
+body{
+background-color: lightblue;
+}
+.corpo {
+  width: 300px;
+  height: 300px;
+  background: grey;
+  opacity: 1;
+  position: relative;
+  animation: corpo 5s 2, pulo-corpo 2s;
+  animation-direction: normal;
+  animation-iteration-count:infinite;
+  border-radius: 50px;
+}
+
+.pe{
+  width: 45px;
+  height: 120px;
+  background-color: grey;
+  border-radius: 0 0 50% 50%;
+  position: absolute;
+  bottom: -120px;
+}
+
+.pe-esquerdo {   
+  left: 60px;    
+}
+
+.pe-direito {
+  left: 180px;
+}
+
+.boca{
+  width: 150px;
+  height: 36px;
+  position: absolute;
+  background-color: red;
+  text-align: center;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  animation: boca 2s;
+  animation-iteration-count:infinite;
+}
+
+.olho{
+  background-color: black;
+  height: 30px;
+  width: 30px;
+  position: absolute;
+  border-radius: 30px;
+  top: 30px;
+}
+
+.olho-esquerdo{
+ left: 75px;
+}
+
+.olho-direito{
+  left: 195px;
+}
+
+.braco{
+  background-color: red;
+  height: 30px;
+  width: 120px;
+  position: absolute;
+  top: 140px;
+}
+
+.braco-direito{
+  right: -100px;
+  transform: rotate(60deg);
+    animation: braco-direito 0.1s;
+  animation-iteration-count:infinite;
+
+}
+
+.braco-esquerdo{
+  left: -100px;
+  transform: rotate(-60deg);
+    animation: braco-esquerdo 0.1s;
+  animation-iteration-count:infinite;
+}
+
+.titulo{
+  animation: titulo 0.5s;
+  animation-iteration-count:infinite;
+}
+
+@keyframes titulo {
+  0%   {transform: rotate(6deg);}
+  25%  {transform: rotate(2deg);}
+  50%  {transform: rotate(-2deg);}
+  75%  {transform: rotate(-6deg);}
+  100% {transform: rotate(2deg);}
+}
+
+@keyframes pulo-corpo {
+  0% { transform: translateY(0px) scale(0.5);}
+  25%{ transform: translateY(90px) scale(0.5);}
+  50%{ transform: translateY(150px) scale(0.5);}
+  75%{ transform: translateY(90px) scale(0.5);}
+  100% {transform: translateY(0px) scale(0.5);}
+}
+
+@keyframes corpo {
+  0%   {opacity: 0.9;left: 0px; top: 0px;}
+  25%  {opacity: 0.8;left: 40%; top: 0px;}
+  50%  {opacity: 0.7;left: 80%; top: 0px;}
+  75%  {opacity: 0.6;left: 40%; top: 0px;}
+  100% {opacity: 0.4;left: 0px; top: 0px;}
+}
+
+@keyframes boca {
+  0%   {height: 45px; border-radius: 0 0 10% 10%;}
+  25%  {height: 60px; border-radius: 0 0 20% 20%;}
+  50%  {height: 81px; border-radius: 0 0 30% 30%;}
+  75%  {height: 105px; border-radius: 0 0 40% 40%;}
+  100% {height: 120px; border-radius: 0 0 50% 50%;}
+}
+
+@keyframes braco-esquerdo {
+  0%   {transform: rotate(-60deg);}
+  25%  {transform: rotate(-20deg);}
+  50%  {transform: rotate(20deg);}
+  75%  {transform: rotate(60deg);}
+  100% {transform: rotate(100deg);}
+}
+
+@keyframes braco-direito {
+  0%   {transform: rotate(60deg);}
+  25%  {transform: rotate(20deg);}
+  50%  {transform: rotate(-20deg);}
+  75%  {transform: rotate(-60deg);}
+  100% {transform: rotate(-100deg);}
+}
+</style>
+</head>
+<body>
+<h1 class="titulo" style="text-align: center; margin-top: 50px;color: black; text-weight: bold"> GASPARZINHO, UM FANTASMINHA CAMARADA</h1>
+<div class="corpo">
+	<div class="braco braco-esquerdo"></div>
+	<div class="braco braco-direito"></div>
+	<div class="olho-esquerdo olho"></div>
+	<div class="olho-direito olho"></div>
+	<div class="boca"></div>
+	<div class="pe-esquerdo pe"></div>
+	<div class="pe-direito pe"></div>
+</div>
+
+</body>
+</html>
